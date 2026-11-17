@@ -1,7 +1,10 @@
+
+import 'package:fit_track_pro/features/weight/screens/home_weight_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:mi_primera_app/features/home/screens/home_screen.dart';
+import 'package:fit_track_pro/features/auth/screens/auth_check_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -11,15 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Fitness Tracker',
+      title: 'FitTrackPro',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blueAccent,
+        ),
       ),
-      home: const MyHomePage(),
+      home: const WeightScreen(),
     );
   }
 }
-
-
-
